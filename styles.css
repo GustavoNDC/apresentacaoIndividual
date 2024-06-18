@@ -1,0 +1,87 @@
+body {
+    font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
+    background-color: #333;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Evita a rolagem desnecessária do corpo */
+}
+
+.container {
+    text-align: center;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%; /* Define a largura máxima do container */
+    max-width: 800px; /* Largura máxima para evitar barras de rolagem horizontal em larguras maiores */
+}
+
+input[type="text"], button {
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Ajusta a largura para considerar o padding */
+}
+
+button {
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    display: block; /* Certifica que o botão não esteja inline */
+    margin: 20px auto; /* Centraliza o botão horizontalmente */
+}
+
+.collapsible, .content {
+    width: 100%;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.content {
+    display: none;
+    background-color: #444; /* Fundo do código igual ao do container */
+    color: white;
+    padding: 10px;
+    overflow-x: auto; /* Permite rolagem horizontal apenas se necessário */
+    word-wrap: normal; /* Evita quebra automática de linha */
+}
+
+.code-block {
+    white-space: pre; /* Mantém o formato de espaçamento do código */
+    margin: 0; /* Remove margens adicionais */
+    padding: 5px; /* Reduz o padding para o texto ficar mais próximo da margem */
+}
+
+
+
+.keyword {
+    color: hsl(214, 100%, 59%); /* Azul escuro */
+}
+
+.function-name {
+    color: #f2ff7c; /* Azul claro */
+}
+
+.function {
+    color: #27bbff; /* Azul mais claro */
+}
+
+.method {
+    color: #f2ff7c; /* Amarelo */
+}
+
+.string {
+    color: #ff4545; /* Vermelho */
+}
+
+.property {
+    color: #27bbff; /* Branco */
+}
+
+.operator {
+    color: #27bbff; /* Roxo para operadores como parênteses e outros símbolos */
+}

@@ -65,29 +65,34 @@ button:hover {
 
 
 .keyword {
-    color: hsl(214, 100%, 59%); /* Azul escuro */
+    color: hsl(214, 100%, 59%);
 }
 
 .function-name {
-    color: #f2ff7c; /* Azul claro */
+    color: #f2ff7c;
 }
 
 .function {
-    color: #27bbff; /* Azul mais claro */
+    color: #27bbff;
 }
 
 .method {
-    color: #f2ff7c; /* Amarelo */
+    color: #f2ff7c;
 }
 
 .string {
-    color: #ff4545; /* Vermelho */
+    color: #ff4545; 
 }
 
 .property {
-    color: #27bbff; /* Branco */
+    color: #27bbff;
 }
 
 .operator {
-    color: #27bbff; /* Roxo para operadores como parênteses e outros símbolos */
+    color: #27bbff;
+}
+#botaoPagina2 {
+    position: fixed; 
+    top: 10px; 
+    right: 10px; 
 }

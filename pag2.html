@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificador Par ou Ímpar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Verificador de Paridade</h1>
+      <input type="text" id="numeroInput" placeholder="Digite um número" />
+      <button onclick="verificarParidade()">Verificar</button>
+      <p id="resultado"></p>
+      <button class="collapsible">Mostrar Código JS</button>
+      <div class="content">
+        <pre id="codeBlockSubstring" class="code-block">
+          <code>
+
+<span class="keyword">const</span> <span class="variable">paridade</span> = (<span class="variable">numero</span> % <span class="number">2</span> === <span class="number">0</span>) ? <span class="string">"Par"</span> : <span class="string">"Ímpar"</span>;
+
+        </code>
+            </pre>
+      </div>
+    </div>
+    <button id="botaoPagina2" onclick="window.location='index.html'">
+      Voltar
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>

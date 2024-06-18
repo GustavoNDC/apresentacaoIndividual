@@ -17,7 +17,7 @@ function verificarParidade() {
     const input = document.getElementById("numeroInput").value;
     const resultado = document.getElementById("resultado");
     
-    // Lógica para verificar paridade
+
     const numero = parseInt(input);
     const paridade = (numero % 2 === 0) ? "Par" : "Ímpar";
     resultado.textContent = `O número ${numero} é ${paridade}.`;

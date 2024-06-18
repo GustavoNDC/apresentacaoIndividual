@@ -1,5 +1,5 @@
 body {
-    font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
+    font-family: Arial, sans-serif;
     background-color: #333;
     color: #ccc;
     display: flex;
@@ -7,7 +7,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow: hidden; /* Evita a rolagem desnecessária do corpo */
 }
 
 .container {
@@ -16,8 +15,6 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 90%; /* Define a largura máxima do container */
-    max-width: 800px; /* Largura máxima para evitar barras de rolagem horizontal em larguras maiores */
 }
 
 input[type="text"], button {
@@ -25,37 +22,46 @@ input[type="text"], button {
     margin-top: 20px;
     border: none;
     border-radius: 4px;
-    width: calc(100% - 22px); /* Ajusta a largura para considerar o padding */
+    width: 200px;
 }
 
 button {
     background-color: #555;
     color: white;
     cursor: pointer;
-    display: block; /* Certifica que o botão não esteja inline */
-    margin: 20px auto; /* Centraliza o botão horizontalmente */
 }
 
-.collapsible, .content {
+button:hover {
+    background-color: #666;
+}
+
+.collapsible {
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
     width: 100%;
-    text-align: left; /* Alinha o texto à esquerda */
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
 }
 
 .content {
     display: none;
-    background-color: #444; /* Fundo do código igual ao do container */
+    background-color: #2b2b2b;
     color: white;
-    padding: 10px;
-    overflow-x: auto; /* Permite rolagem horizontal apenas se necessário */
-    word-wrap: normal; /* Evita quebra automática de linha */
+    padding: 20px;
+    margin-top: 10px;
+    overflow-x: auto;
+    text-align: left;
 }
 
 .code-block {
-    white-space: pre; /* Mantém o formato de espaçamento do código */
-    margin: 0; /* Remove margens adicionais */
-    padding: 5px; /* Reduz o padding para o texto ficar mais próximo da margem */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
 }
-
 
 
 .keyword {

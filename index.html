@@ -15,26 +15,38 @@
       <button class="collapsible">Mostrar Código JS</button>
       <div class="content">
         <pre id="codeBlockSubstring" class="code-block">
-                <code>
-                    <span class="keyword">function</span> <span class="function-name">verificarParidade</span>(<span class="variable">n</span>) {
-                        <span class="keyword">let</span> <span class="variable">binario</span> = <span class="variable">n</span>.<span class="method">toString</span>(<span class="number">2</span>);
-                    
-                        <span class="keyword">function</span> <span class="function-name">contarUns</span>(<span class="variable">binario</span>) {
-                            <span class="keyword">if</span> (<span class="variable">binario</span>.<span class="property">length</span> === <span class="number">0</span>) {
-                                <span class="keyword">return</span> <span class="number">0</span>;
-                            } <span class="keyword">else</span> {
-                                <span class="keyword">return</span> (<span class="variable">binario</span>[<span class="number">0</span>] === <span class="string">'1'</span> ? <span class="number">1</span> : <span class="number">0</span>) + <span class="function-name">contarUns</span>(<span class="variable">binario</span>.<span class="method">slice</span>(<span class="number">1</span>));
-                            }
-                        }
-                    
-                        <span class="keyword">let</span> <span class="variable">paridade</span> = <span class="function-name">contarUns</span>(<span class="variable">binario</span>) % <span class="number">2</span>;
-                        <span class="keyword">if</span> (<span class="variable">paridade</span> === <span class="number">0</span>) {
-                            <span class="keyword">return</span> <span class="string">"Ímpar"</span>;
-                        } <span class="keyword">else</span> {
-                            <span class="keyword">return</span> <span class="string">"Par"</span>;
-                        }
-                    }
-                    </code>
+            <code>
+<span class="keyword">function</span> <span class="function-name">verificarParidade</span>(<span class="variable">n</span>) {
+    <span class="keyword">let</span> <span class="variable">binario</span> = <span class="function-name">converteParaBinario</span>(<span class="variable">n</span>);
+    <span class="keyword">let</span> <span class="variable">conta</span> = <span class="function-name">contarUns</span>(<span class="variable">binario</span>);
+
+    <span class="keyword">if</span> (<span class="function-name">verificaParidadeContagem</span>(<span class="variable">conta</span>)) {
+        <span class="keyword">return</span> <span class="string">"Ímpar"</span>;
+    } <span class="keyword">else</span> {
+        <span class="keyword">return</span> <span class="string">"Par"</span>;
+    }
+}
+                
+<span class="keyword">function</span> <span class="function-name">converteParaBinario</span>(<span class="variable">n</span>) {
+    <span class="keyword">return</span> <span class="variable">n</span>.<span class="method">toString</span>(<span class="number">2</span>);
+}
+                
+<span class="keyword">function</span> <span class="function-name">contarUns</span>(<span class="variable">binario</span>) {
+    <span class="keyword">if</span> (<span class="variable">binario</span>.<span class="property">length</span> === <span class="number">0</span>) {
+        <span class="keyword">return</span> <span class="number">0</span>;
+    } <span class="keyword">else</span> {
+        <span class="keyword">return</span> (<span class="variable">binario</span>.<span class="method">charAt</span>(<span class="number">0</span>) === <span class="string">'1'</span> ? <span class="number">1</span> : <span class="number">0</span>) + <span class="function-name">contarUns</span>(<span class="variable">binario</span>.<span class="method">substring</span>(<span class="number">1</span>));
+    }
+}
+                
+<span class="keyword">function</span> <span class="function-name">verificaParidadeContagem</span>(<span class="variable">conta</span>) {
+    <span class="keyword">return</span> <span class="variable">conta</span> % <span class="number">2</span> === <span class="number">0</span>;
+}
+                
+<span class="keyword">let</span> <span class="variable">numero</span> = <span class="function">parseInt</span>(<span class="function">prompt</span>(<span class="string">"Digite um número para verificar sua paridade: "</span>), <span class="number">10</span>);
+<span class="keyword">let</span> <span class="variable">resultado</span> = <span class="function-name">verificarParidade</span>(<span class="variable">numero</span>);
+<span class="function">alert</span>(<span class="variable">resultado</span>);
+</code>
             </pre>
       </div>
     </div>
